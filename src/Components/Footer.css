@@ -1,0 +1,23 @@
+.footer__wrapper{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: grey;
+}
+
+.footer__child{
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 3px;
+  gap: 4px;
+  font-size: x-small;
+}
+
+.icon{
+  font-size: x-small !important;
+  padding-top: 1.8px;
+}
