@@ -1,17 +1,13 @@
 .header__wrapper{
   background-color: #F5B21A;
-  height: 30px;
-  display: flex;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);
 
 }
 
-.header__child h1{
-  font-size: small;
-}
-
-.header__child{
-  width: 90%;
-  display: flex;
-  align-items: center;
-  margin-left: 13px;
+.header__wrapper{
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 200;  
 }
