@@ -9,6 +9,7 @@ import StateHooks from './Components/StateHooks'
 import StateHooks2 from './Components/StateHooks2';
 import DestructuringSamples from './challenges/DestructuringSamples'
 import EventHandling from './Components/EvenHandling'
+import Spread from './Components/Spread';
 function App() {
   return (
     <div className="app">
@@ -26,7 +27,8 @@ function App() {
       {/* <StateHooks /> */}
       {/* <StateHooks2 /> */}
       {/* <DestructuringSamples /> */}
-      <EventHandling />
+      {/* <EventHandling /> */}
+      <Spread />
     </div>
   )
 }
