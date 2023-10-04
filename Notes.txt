@@ -102,3 +102,6 @@ const StateHooks = () => {
 }
 
 -this works in the console but not in the dom because of REACTDOM.render() everything is being rendered therefore hooks come into play here else we must re render eveytime we click.
+
+/***CONTROLLED COMPONENTS***/
+  -we have to add the value that comes from our state to the value attributeof the input to maintain "single source of truth"

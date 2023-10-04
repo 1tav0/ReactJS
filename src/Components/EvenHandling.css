@@ -8,6 +8,12 @@
   gap: 5px;
 }
 
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 input, button{
   width: 100px;
   border: none;
