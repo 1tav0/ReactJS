@@ -27,8 +27,8 @@ function App() {
       {/* <StateHooks /> */}
       {/* <StateHooks2 /> */}
       {/* <DestructuringSamples /> */}
-      {/* <EventHandling /> */}
-      <Spread />
+      <EventHandling />
+      {/* <Spread /> */}
     </div>
   )
 }
