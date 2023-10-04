@@ -1,0 +1,14 @@
+.container{
+  background-color: #479897;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+input, button{
+  width: 100px;
+  border: none;
+}
