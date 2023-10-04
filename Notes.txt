@@ -82,3 +82,23 @@ const newNumbers = numbers.filter(function (num){
 1. When our UI depends on variables we define in our components ie a flag being false out puts something different then when it is true.
 
 2. document.getElementById("root").style.textDecoration = "line-through";
+
+/*****REACT HOOKS*****
+const StateHooks = () => {
+
+  var count = 0;
+
+  function increase() {
+    count++
+    console.log('got clicked');
+  }
+
+  return (
+    <div className='container'>
+      <h1>{count}</h1>
+      <button onClick={increase}>+</button>
+    </div>
+  )
+}
+
+-this works in the console but not in the dom because of REACTDOM.render() everything is being rendered therefore hooks come into play here else we must re render eveytime we click.

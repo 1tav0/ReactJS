@@ -5,6 +5,7 @@ import Note from './Components/Note';
 import notes from './notes'
 import Login from './Components/Login';
 import State from './Components/State';
+import StateHooks from './Components/StateHooks'
 function App() {
   return (
     <div className="app">
@@ -18,7 +19,8 @@ function App() {
       }
       <Footer className="centered__footer"/> */}
       {/* <Login /> */}
-      <State />
+      {/* <State /> */}
+      <StateHooks />
     </div>
   )
 }
