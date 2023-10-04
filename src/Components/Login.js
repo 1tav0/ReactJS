@@ -2,11 +2,11 @@ import React from 'react'
 import './Login.css'
 import Form from './Form';
 const Login = () => {
-  var isLoggedIn = true;
+  var returningUser = true;
 
   return (
     <div className='login__wrapper'>
-      {<Form flag={isLoggedIn} />}
+      {<Form flag={returningUser} />}
     </div>
   )
 }

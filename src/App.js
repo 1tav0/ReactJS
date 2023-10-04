@@ -4,6 +4,7 @@ import Header from './Components/Header';
 import Note from './Components/Note';
 import notes from './notes'
 import Login from './Components/Login';
+import State from './Components/State';
 function App() {
   return (
     <div className="app">
@@ -16,7 +17,8 @@ function App() {
         })
       }
       <Footer className="centered__footer"/> */}
-      <Login />
+      {/* <Login /> */}
+      <State />
     </div>
   )
 }
