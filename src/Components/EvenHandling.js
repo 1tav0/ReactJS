@@ -3,29 +3,29 @@ import './EvenHandling.css'
 
 const EvenHandling = () => {
 
-  const [headingText, setHeadingText] = useState("Hello");
+  const [name, setName] = useState("");
 
+  function handleChange(event) {
+    console.log(event.target.value);
+    // console.log(event.target.placeholder);
+    // console.log(event.target.type);
+    setName(event.target.value);
+  }
+
+  const [heading, setHeading] = useState("");
   function handleClick() {
-    setHeadingText("Submitted");
+    setHeading(name);
   }
-
-  const [isMouseOver, setMouseOver] = useState(false);
-  function handleMouseOver() {
-    setMouseOver(true);
-  }
-
-  function handleMouseOut() {
-    setMouseOver(false);
-  }
+  
   return (
     <div className='container'>
-      <h1>{headingText}</h1>
-      <input type="text" placeholder="What's your name?" />
+      <h1>Hello {heading}</h1>
+      <input
+        onChange={handleChange}
+        value={name}
+        type="text" placeholder="What's your name?" />
       <button
-        style={{ backgroundColor: isMouseOver ? "black" : "red"}}
-        onClick={handleClick}
-        onMouseOver={handleMouseOver}
-        onMouseOut={handleMouseOut}
+        onClick = {handleClick}
       >Submit</button>
     </div>
   )
