@@ -13,20 +13,26 @@ const EvenHandling = () => {
   }
 
   const [heading, setHeading] = useState("");
-  function handleClick() {
+  function handleClick(event) {
     setHeading(name);
+
+    event.preventDefault();
   }
   
   return (
     <div className='container'>
       <h1>Hello {heading}</h1>
-      <input
-        onChange={handleChange}
-        value={name}
-        type="text" placeholder="What's your name?" />
-      <button
-        onClick = {handleClick}
-      >Submit</button>
+      <form onSubmit={handleClick}>
+        <input
+          onChange={handleChange}
+          value={name}
+          type="text" placeholder="What's your name?" />
+        <button
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
     </div>
   )
 }
