@@ -3,35 +3,50 @@ import './EvenHandling.css'
 
 const EvenHandling = () => {
 
-  const [fName, setfName] = useState("");
-  const [lName, setlName] = useState("");
+  const [fullName, setFullName] = useState({
+    fName: "",
+    lName: ""
+  });
+  
+  function handleChange(event) {
+    const newValue = event.target.value;
+    const inputName = event.target.name;
 
-  function updateFName(event) {
-    const firstName = event.target.value;
-    setfName(firstName);
+    
+
+    setFullName(prevValue => {
+      if (inputName === "fName") {
+        return {
+          fName: newValue,
+          lName: prevValue.lName
+        };
+      } else if (inputName === "lName") {
+        return {
+          fName: prevValue.fName,
+          lName: newValue
+        }
+      }
+    })
+
   }
 
-  function updateLName(event) {
-    const lastName = event.target.value;
-    setlName(lastName);
-  }
 
   
   return (
     <div className='container'>
-      <h1>Hello {fName} {lName}</h1>
+      <h1>Hello {fullName.fName} {fullName.lName}</h1>
       <form className='form'>
         <input
           name="fName"
           type="text" placeholder="First name?"
-          value={fName}
-          onChange={updateFName}
+          value={fullName.fName}
+          onChange={handleChange}
         />
         <input
-          name="fName"
+          name="lName"
           type="text" placeholder="First name?"
-          value={lName}
-          onChange={updateLName}
+          value={fullName.lName}
+          onChange={handleChange}
         />
         <button
         >
