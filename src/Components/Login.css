@@ -1,0 +1,35 @@
+.login__wrapper{
+  background-color: #479A98;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__child{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 130px;
+}
+
+.login__child{
+  text-align: center;
+}
+
+input{
+  border: none;
+  padding: 5px;
+  background-color: rgba(172, 171, 171, 0.5);
+  border-radius: 2px;
+  color: gray;
+  cursor: pointer;
+}
+
+.login{
+  background-color: white;
+  border: none;
+  color: aqua;
+  border-radius: 2px;
+  padding : 5px;
+}

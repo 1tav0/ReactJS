@@ -2,3 +2,78 @@
 - const currentDate = new Date().getFullYear;
 - attribute contentEditable - we can edit it in the Browser 
 - attribute (HTML) spellCheck
+/***FUNCTIONAL PROGRAMMIN***/
+  -  Passin a function as a parameter 
+  -  used in map,filter,reduce,find,findIndex 
+  - map is used for rendering multiple components through looping through a js file of array of objects 
+  - i.e a contacts file with an array of mulptiple contact objects.
+  - we can create a component for it and map through the array and in the call back function being passed in map return that component
+  i.e. 1. {contacts.map(createCard)} 
+        2. function createCard(contact){
+            return <Card name={contact.name} img={contact.img} tel={contact.tel} email={contact.email} key={contact.id}/>
+          }
+          3. must return a key when we map
+/******FUNCTIONS*******/
+var numbers = [3, 56, 2, 48, 5];
+
+//MAP - Creates a new array by doing something with each item in an array
+  functon double(x){
+    return x*2;
+  }
+
+  numbers.map(double) //6, 112, 4, 96, 10
+
+//With forEach
+  var newNumbers = [];
+  function double(x){
+    newNumbers.push(x*2);
+  }
+  numbers.foEach(double); 
+  console.log(newNumbers) //6, 112, 4, 96, 10
+
+//FILTER - Create a new array by keeping the items that return true
+
+const newNumbers = numbers.filter(function (num){
+  return num > 10;
+}); //[3,2,5]
+
+//WITH forEach
+  var newNumbers = [];
+  numbers.forEach(function (num) {
+    if(num<10){
+      newNumbers.push(num);
+    }
+  });
+  console.log(newNumbers);
+
+//REDUCE - Accumulate a value by doing something to each item in an array
+
+  const newNumber = numbers.reduce(function (accumulator, currentNumber){
+    return accumulator + currentNumber;
+  })
+
+//with forEach
+  var newNumber = 0;
+  numbers.forEach(funciton (currentNumber){
+    newNumber += currentNumber;
+  })
+
+//FIND - find the first item that matches in an array
+  const newNumber = numbers.find(function(num){
+    return num > 10;
+  })
+
+  console.log(newNumber); //56
+
+//FINDINDEX - find the index of the first item that matches.
+
+  const newNumber = numbers.findIndex(function (num){
+    return num > 10;
+  })
+
+  console.log(newNumber); //1
+
+//TO TRUNCATE A PARAGRAPH
+  const newList = list.map(function(stuff){
+    return stuff.paragraph.substring(0, 100); //0 to 100 characters
+  })
