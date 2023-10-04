@@ -7,6 +7,7 @@ import Login from './Components/Login';
 import State from './Components/State';
 import StateHooks from './Components/StateHooks'
 import StateHooks2 from './Components/StateHooks2';
+import DestructuringSamples from './challenges/DestructuringSamples'
 function App() {
   return (
     <div className="app">
@@ -22,7 +23,9 @@ function App() {
       {/* <Login /> */}
       {/* <State /> */}
       {/* <StateHooks /> */}
-      <StateHooks2 />
+      {/* <StateHooks2 /> */}
+      {/* <DestructuringSamples /> */}
+      
     </div>
   )
 }
