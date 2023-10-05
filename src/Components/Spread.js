@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import TodoItem from './TodoItem';
 const Spread = () => {
   const [inputText, setInputText] = useState("");
   const [items, setItems] = useState([]);
@@ -38,7 +38,7 @@ const Spread = () => {
       </div>
       <div>
         <ul>
-          {items.map((newItem) => (<li>{newItem}</li>))}
+          {items.map((newItem) => (<TodoItem text={newItem} />))}
         </ul>
       </div>
     </div>
