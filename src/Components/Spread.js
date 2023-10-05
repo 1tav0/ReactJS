@@ -19,6 +19,14 @@ const Spread = () => {
     setInputText("");
   }
 
+  function deleteItem(id) {
+    setItems((prevItems) => {
+      return prevItems.filter((item, index) => {
+        return index !== id;
+      })
+    })
+  }
+
   return (
     <div className="container">
       <div className="heading">
@@ -38,7 +46,12 @@ const Spread = () => {
       </div>
       <div>
         <ul>
-          {items.map((newItem) => (<TodoItem text={newItem} />))}
+          {items.map((newItem,index) => (<TodoItem
+            text={newItem}
+            onChecked={deleteItem}
+            key={index}
+            id={index}
+          />))}
         </ul>
       </div>
     </div>
